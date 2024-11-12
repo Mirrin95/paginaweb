@@ -1,301 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Streamer Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
-        }
-
-        header nav ul {
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        header nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem;
-        }
-
-        header nav a:hover {
-            text-decoration: underline;
-        }
-
-        .banner {
-            background: #555;
-            padding: 2rem;
-            text-align: center;
-            color: #fff;
-            position: relative;
-
-        }
-
-        .banner-image img {
-            position: relative;
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .banner-content h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto sobre la imagen */
-    color: #ec0707fb; /* Color blanco para que el texto sea visible */
-    margin: 0;
-    z-index: 1; /* Asegura que el texto esté sobre la imagen */
-         }
-
-
-        .content-section {
-            padding: 2rem;
-            background: #e2e2e2;
-            margin: 1rem 0;
-        }
-
-        .content-section h2 {
-            text-align: center;
-        }
-
-        .content-thumbnails {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .content-thumbnails img {
-            width: 200px;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .live-stream iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
-        }
-
-        .schedule {
-            background: #fff;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 5px;
-        }
-
-        .blog-posts {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .post {
-            background: #fff;
-            border-radius: 5px;
-            padding: 1rem;
-            width: 300px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .post img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-
-        .community, .contact, .about {
-            background: #fff;
-            padding: 2rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact label, .contact input, .contact textarea, .contact button {
-            margin-bottom: 1rem;
-        }
-
-        .contact input, .contact textarea {
-            padding: 0.5rem;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .contact button {
-            padding: 0.7rem;
-            border: none;
-            background: #333;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact button:hover {
-            background: #555;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            margin: 0 0.5rem;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#about">Work experience</a></li>
-                <li><a href="#live">Live</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#community">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <!-- Banner-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://www.linkedin.com/in/michael-andres-rincon-garcia-97ba991a1/">Michael Rincon</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#Job-Experience">Job Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Life-Style">Lifestyle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
             </ul>
-        </nav>
-    </header>
-
-    <!-- Main Banner -->
-    <section id="Home" class="banner">
-        <div class="banner-content">
-            <h1>Gaming, Coding, and Lifestyle in One Place</h1>
-            <div class="banner-image">
-                <img src="imagenes/banner.jpg" alt="Banner Image">
+          </div>
+        </div>
+      </nav>
+    <!-- Job experience-->
+    <div class="container text-center" id="Job-Experience">
+      <div class="row align-items-start">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card" style="display: flex; height: 550px;">
+            <img src="imagenes/microsoft.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CLM Manager</h5>
+              <p class="card-text d-none d-sm-block">A CLM (Customer Lifecycle Management) in Microsoft optimizes customer relationships, improving engagement, retention, and overall satisfaction.</p>
+              <a href="https://www.microsoft.com/" class="btn btn-primary" style="margin-bottom: 5px;">Go to website</a>
             </div>
+          </div>
         </div>
-    </section>
-
-    <!-- Sections for Content Categories -->
-    <section id="latest-content">
-        <div class="content-section" id="coding">
-            <h2>Latest in Coding</h2>
-            <div class="content-thumbnails">
-                <img src="imagenes/git.jpg" alt="Coding Thumbnail 1">
-                <img src="imagenes/git.jpg" alt="Coding Thumbnail 2">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card" style="display: flex; height: 550px;">
+            <img src="imagenes/fygaro_logo.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Support Advisor</h5>
+              <p class="card-text d-none d-sm-block">A Support Advisor at Fygaro assists customers, resolves technical issues, and improves customer experience.</p>
+              <a href="https://www.fygaro.com/en" class="btn btn-primary mb-1">Go to website</a>
             </div>
+          </div>
         </div>
-
-        <div class="content-section" id="sports">
-            <h2>Latest in Sports</h2>
-            <div class="content-thumbnails">
-                <img src="imagenes/fcp24.jpg" alt="Sports Thumbnail 1">
-                <img src="imagenes/fcp24.jpg" alt="Sports Thumbnail 2">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card" style="display: flex; height: 550px;">
+            <img src="imagenes/godaddy.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ETC Consultant</h5>
+              <p class="card-text d-none d-sm-block">At GoDaddy, the job of an ETC (Ecommerce Technical Consultant) is to optimize technical solutions to improve online stores.</p>
+              <a href="https://www.godaddy.com/es" class="btn btn-primary" style="margin-bottom: 5px;">Go to website</a>
             </div>
+          </div>
         </div>
-
-        <div class="content-section" id="lifestyle">
-            <h2>Latest in Lifestyle</h2>
-            <div class="content-thumbnails">
-                <img src="imagenes/workout.jpg" alt="Lifestyle Thumbnail 1">
-                <img src="imagenes/workout.jpg" alt="Lifestyle Thumbnail 2">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card" style="display: flex; flex-direction: column; height: 550px;">
+            <img src="imagenes/microsoft.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">AD Agent</h5>
+              <p class="card-text d-none d-sm-block">The Answer Desk Agent at Microsoft provides technical support to customers, resolves issues, and provides assistance.</p>
+              <a href="https://www.microsoft.com/" class="btn btn-primary" style="margin-top: auto; margin-bottom: 5px;">Go to website</a>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="content-section" id="gaming">
-            <h2>Latest in Gaming</h2>
-            <div class="content-thumbnails">
-                <img src="imagenes/xbox.jpeg" alt="Gaming Thumbnail 1">
-                <img src="imagenes/xbox.jpeg" alt="Gaming Thumbnail 2">
-            </div>
+    <!-- Descargar hoja de vida-->
+     <div class ="cont" style="display: flexbox;" >
+      <div class="mensajedeentrada">
+        <p class="Grande" style="font-size: 70px;">I am happy to have you here.</p>
+        <p class="mensaje">I am a web developer with knowledge of JS, HTML, CSS, GIT, GITHUB, PYHTON, JAVA, NODE JS, NPM, REACT.
+
+          I have vast experience working with technologies like Azure, Azure web services, Microsoft Windows, Office 365, Dynamics, WHM, cPanel, Plesk web servers, VPS, DNS, emails, and BASH. I hold certificates from cPanel, programming certificates from Platzi, and an MS900 certificate from Microsoft. I have had the privilege of working for companies like GoDaddy, Microsoft, and Fygaro in various fields such as e-commerce, IT support, consultancy, and more.
+          
+          I am looking for the opportunity to take a leap into the world of development. 😎😎😎</p>
+
+
+        <p>To download my resume click below ⬇</p>
+
+        <div class="container mt-5">
+          <a href="archivo/hoja de vida developer.pdf" download class="btn btn-primary">Descargar PDF</a>
         </div>
-    </section>
+      </div>
+     </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I am an account manager 
-            expert with vast experience working
-             with technologies like Azure, Azure web services, 
-             Microsoft Windows, Office 365, Dynamics, WHM,
-              cPanel, Plesk web servers, VPS, DNS, emails,
-               and BASH. I hold certificates from cPanel, 
-               programming certificates from Platzi,
-                and an MS900 certificate from Microsoft.
-                 I have had the privilege of working for companies 
-                 like GoDaddy, Microsoft, and Fygaro in various fields 
-                 such as e-commerce, IT support, consultancy, and more. 
-                 I am excited to share my knowledge and experience with you all.
-                  Thank you.</p>
-                  <nav>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/michael-andres-rincon-garcia-97ba991a1/">Microsoft</a></li>
-                        <li><a href="https://www.linkedin.com/in/michael-andres-rincon-garcia-97ba991a1/">Fygaro</a></li>
-                        <li><a href="https://www.linkedin.com/in/michael-andres-rincon-garcia-97ba991a1/">Godaddy</a></li>
-                        <li><a href="https://www.linkedin.com/in/michael-andres-rincon-garcia-97ba991a1/">Microsoft</a></li>
-                    </ul>
-                </nav>
-    </section>
+     <!-- stack-->
 
-    <!-- Live Section -->
-    <section id="live">
-        <h2>Live Stream</h2>
-        <div class="live-stream">
-            <iframe src="https://kick.com/elmikecol" frameborder="0"></iframe>
-        </div>
-        <div class="schedule">
-            <h3>Streaming Schedule</h3>
-            <p>Details about streaming times and topics here.</p>
-        </div>
-    </section>
+     <div class="container-fluid bg-dark py-5 mt-3 text-center">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/react.jpg" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/python.png" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/js.png" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/java.png" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/html-5.png" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><img src="imagenes/css-3.png" class="img-logo" alt="..." style="width: 70px; height: 70px;"></div>
+      </div>
+     </div>
+
+          <!-- lifestyle-->
+
+          <div class="container-fluid text-center vh-100" id="Life-Style">
+
+            <p class="Grande" style="font-size: 30px;">LIFESTYLE</p>
+           <section id="live" class="h-100 d-flex flex-column">
+             <h2>Live Stream</h2>
+           <div class="live-stream flex-grow-1 d-flex align-items-center justify-content-center">
+           <iframe src="https://kick.com/elmikecol" frameborder="0" class="w-100 h-100"></iframe>
+          </div>
+             <div class="schedule">
+              <h3>Weekends</h3>
+             <p> Fc 24, straming, chatting, coding and more</p>
+      </div>
+  </section>
+</div>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <form action="your-contact-endpoint" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 El Mike. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://twitter.com/yourhandle">Twitter</a>
-            <a href="https://youtube.com/yourchannel">YouTube</a>
-            <a href="https://kick.com/yourchannel">Kick</a>
-        </div>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <form action="your-contact-endpoint" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+      </form>
+      
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <p>&copy; 2024 El Mike. All rights reserved.</p>
+      <div class="social-links">
+          <a href="https://twitter.com/yourhandle">Twitter</a>
+          <a href="https://youtube.com/yourchannel">YouTube</a>
+          <a href="https://kick.com/yourchannel">Kick</a>
+      </div>
+  </footer>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
